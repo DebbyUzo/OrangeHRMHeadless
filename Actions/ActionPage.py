@@ -112,9 +112,19 @@ class Admin_User_Management_Page:
         click_general_information.click()
         time.sleep(Config.WAIT_TIME)
 
+    def click_organisation_dropdown(self):
+        click_organisation = WebDriverWait(self.driver, 20).until(EC.presence_of_element_located(AdminUserManagementLocators.ORGANISATION))
+        click_organisation.click()
+        time.sleep(Config.WAIT_TIME)
+
     def click_locations(self):
         click_locations = WebDriverWait(self.driver, 20).until(EC.presence_of_element_located(AdminUserManagementLocators.LOCATIONS))
         click_locations.click()
+        time.sleep(Config.WAIT_TIME)
+
+    def click_organisation_drop_down(self):
+        click_organisation = WebDriverWait(self.driver, 20).until(EC.presence_of_element_located(AdminUserManagementLocators.ORGANISATION))
+        click_organisation.click()
         time.sleep(Config.WAIT_TIME)
 
     def click_structures(self):
@@ -132,9 +142,19 @@ class Admin_User_Management_Page:
         click_skills.click()
         time.sleep(Config.WAIT_TIME)
 
+    def click_qualifications_dropdown(self):
+        click_qualifications = WebDriverWait(self.driver, 20).until(EC.presence_of_element_located(AdminUserManagementLocators.QUALIFICATIONS))
+        click_qualifications.click()
+        time.sleep(Config.WAIT_TIME)
+
     def click_education(self):
         click_education = WebDriverWait(self.driver, 20).until(EC.presence_of_element_located(AdminUserManagementLocators.EDUCATION))
         click_education.click()
+        time.sleep(Config.WAIT_TIME)
+
+    def click_qualifications_drop_down(self):
+        click_qualifications = WebDriverWait(self.driver, 20).until(EC.presence_of_element_located(AdminUserManagementLocators.QUALIFICATIONS))
+        click_qualifications.click()
         time.sleep(Config.WAIT_TIME)
 
     def click_licenses(self):
@@ -142,9 +162,19 @@ class Admin_User_Management_Page:
         click_licenses.click()
         time.sleep(Config.WAIT_TIME)
 
+    def click_qualifications_drop_down_button(self):
+        click_qualifications = WebDriverWait(self.driver, 20).until(EC.presence_of_element_located(AdminUserManagementLocators.QUALIFICATIONS))
+        click_qualifications.click()
+        time.sleep(Config.WAIT_TIME)
+
     def click_languages(self):
         click_languages = WebDriverWait(self.driver, 20).until(EC.presence_of_element_located(AdminUserManagementLocators.LANGUAGES))
         click_languages.click()
+        time.sleep(Config.WAIT_TIME)
+
+    def click_qualifications_drop_down_page(self):
+        click_qualifications = WebDriverWait(self.driver, 20).until(EC.presence_of_element_located(AdminUserManagementLocators.QUALIFICATIONS))
+        click_qualifications.click()
         time.sleep(Config.WAIT_TIME)
 
     def click_memberships(self):
@@ -172,9 +202,19 @@ class Admin_User_Management_Page:
         click_email_configuration.click()
         time.sleep(Config.WAIT_TIME)
 
+    def click_configuration_DROP(self):
+        click_configuration = WebDriverWait(self.driver, 20).until(EC.presence_of_element_located(AdminUserManagementLocators.CONFIGURATION))
+        click_configuration.click()
+        time.sleep(Config.WAIT_TIME)
+
     def click_emai_subscriptions(self):
         click_email_subscriptions = WebDriverWait(self.driver, 20).until(EC.presence_of_element_located(AdminUserManagementLocators.EMAIL_SUBSCRIPTIONS))
         click_email_subscriptions.click()
+        time.sleep(Config.WAIT_TIME)
+
+    def click_configuration_down(self):
+        click_configuration = WebDriverWait(self.driver, 20).until(EC.presence_of_element_located(AdminUserManagementLocators.CONFIGURATION))
+        click_configuration.click()
         time.sleep(Config.WAIT_TIME)
 
     def click_localization(self):
@@ -182,9 +222,19 @@ class Admin_User_Management_Page:
         click_localization.click()
         time.sleep(Config.WAIT_TIME)
 
+    def click_configuration_dropdown(self):
+        click_configuration = WebDriverWait(self.driver, 20).until(EC.presence_of_element_located(AdminUserManagementLocators.CONFIGURATION))
+        click_configuration.click()
+        time.sleep(Config.WAIT_TIME)
+
     def click_language_packages(self):
         click_language_packages = WebDriverWait(self.driver, 20).until(EC.presence_of_element_located(AdminUserManagementLocators.LANGUAGE_PACKAGES))
         click_language_packages.click()
+        time.sleep(Config.WAIT_TIME)
+
+    def click_configuration_drop_down(self):
+        click_configuration = WebDriverWait(self.driver, 20).until(EC.presence_of_element_located(AdminUserManagementLocators.CONFIGURATION))
+        click_configuration.click()
         time.sleep(Config.WAIT_TIME)
 
     def click_modules(self):
@@ -192,14 +242,29 @@ class Admin_User_Management_Page:
         click_modules.click()
         time.sleep(Config.WAIT_TIME)
 
+    def click_configuration_button(self):
+        click_configuration = WebDriverWait(self.driver, 20).until(EC.presence_of_element_located(AdminUserManagementLocators.CONFIGURATION))
+        click_configuration.click()
+        time.sleep(Config.WAIT_TIME)
+
     def click_social_media_authentication(self):
         click_social_media_authentication = WebDriverWait(self.driver, 20).until(EC.presence_of_element_located(AdminUserManagementLocators.SOCIAL_MEDIA_AUTHENTICATION))
         click_social_media_authentication.click()
         time.sleep(Config.WAIT_TIME)
 
+    def click_configuration_page(self):
+        click_configuration = WebDriverWait(self.driver, 20).until(EC.presence_of_element_located(AdminUserManagementLocators.CONFIGURATION))
+        click_configuration.click()
+        time.sleep(Config.WAIT_TIME)
+
     def click_register_oauth_client(self):
         click_register_oauth_client = WebDriverWait(self.driver, 20).until(EC.presence_of_element_located(AdminUserManagementLocators.REGISTER_OAUTH_CLIENT))
         click_register_oauth_client.click()
+        time.sleep(Config.WAIT_TIME)
+
+    def click_configuration_drop_button(self):
+        click_configuration = WebDriverWait(self.driver, 20).until(EC.presence_of_element_located(AdminUserManagementLocators.CONFIGURATION))
+        click_configuration.click()
         time.sleep(Config.WAIT_TIME)
 
     def click_ldap_configuration(self):
