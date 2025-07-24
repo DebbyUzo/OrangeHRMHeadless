@@ -4,7 +4,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
 from Config.Configuration import Config
-from Locators.Locators_page import LoginLocators, AdminPageLocators, AdminUserManagementLocators
+from Locators.Locators_page import LoginLocators, AdminPageLocators, AdminUserManagementLocators, LogoutLocators
 
 
 class Action_Page:
@@ -270,4 +270,9 @@ class Admin_User_Management_Page:
     def click_ldap_configuration(self):
         click_ldap_configuration = WebDriverWait(self.driver, 20).until(EC.presence_of_element_located(AdminUserManagementLocators.LDAP_CONFIGURATION))
         click_ldap_configuration.click()
+        time.sleep(Config.WAIT_TIME)
+
+    def click_log_out_page(self):
+        click_log_out_page = WebDriverWait(self.driver, 20).until(EC.presence_of_element_located(LogoutLocators.LOG_OUT))
+        click_log_out_page.click()
         time.sleep(Config.WAIT_TIME)

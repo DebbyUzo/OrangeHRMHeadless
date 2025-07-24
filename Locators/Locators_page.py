@@ -47,12 +47,15 @@ class AdminUserManagementLocators:
     CONFIGURATION_DOWN = (By.XPATH, "/html/body/div/div[1]/div[1]/header/div[2]/nav/ul/li[7]/span")
     LOCALIZATION = (By.XPATH, "/html/body/div/div[1]/div[1]/header/div[2]/nav/ul/li[5]/ul/div[3]/ul/li[3]")
     CONFIGURATION_DROPDOWN = (By.XPATH, "/html/body/div/div[1]/div[1]/header/div[2]/nav/ul/li[7]/span")
-    LANGUAGE_PACKAGES = (By.CSS_SELECTOR, "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-navigation > header > div.oxd-topbar-body > nav > ul > li.--active.oxd-topbar-body-nav-tab > ul > div:nth-child(3) > ul > li:nth-child(4)")
+    LANGUAGE_PACKAGES = (By.XPATH, "/html/body/div/div[1]/div[1]/header/div[2]/nav/ul/li[5]/ul/div[3]/ul/li[4]")
     CONFIGURATION_DROP_DOWN = (By.XPATH, "/html/body/div/div[1]/div[1]/header/div[2]/nav/ul/li[7]/span")
-    MODULES = (By.XPATH, "/html/body/div/div[1]/div[1]/header/div[2]/nav/ul/li[5]/ul/div[3]/ul/li[5]")
+    MODULES = (By.CSS_SELECTOR, "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-navigation > header > div.oxd-topbar-body > nav > ul > li.--active.oxd-topbar-body-nav-tab > ul > div:nth-child(3) > ul > li:nth-child(5)")
     CONFIGURATION_BUTTON = (By.XPATH, "/html/body/div/div[1]/div[1]/header/div[2]/nav/ul/li[7]/span")
-    SOCIAL_MEDIA_AUTHENTICATION = (By.CSS_SELECTOR, "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-navigation > header > div.oxd-topbar-body > nav > ul > li.--active.oxd-topbar-body-nav-tab > ul > div:nth-child(3) > ul > li:nth-child(6)")
+    SOCIAL_MEDIA_AUTHENTICATION = (By.XPATH, "/html/body/div/div[1]/div[1]/header/div[2]/nav/ul/li[5]/ul/div[3]/ul/li[7]/a")
     CONFIGURATION_PAGE = (By.XPATH, "/html/body/div/div[1]/div[1]/header/div[2]/nav/ul/li[7]/span")
     REGISTER_OAUTH_CLIENT = (By.XPATH, "/html/body/div/div[1]/div[1]/header/div[2]/nav/ul/li[5]/ul/div[3]/ul/li[7]")
     CONFIGURATION_DROP_BUTTON = (By.XPATH, "/html/body/div/div[1]/div[1]/header/div[2]/nav/ul/li[7]/span")
     LDAP_CONFIGURATION = (By.CSS_SELECTOR, "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-navigation > header > div.oxd-topbar-body > nav > ul > li.--active.oxd-topbar-body-nav-tab > ul > div:nth-child(3) > ul > li:nth-child(8)")
+
+class LogoutLocators:
+    LOG_OUT = (By.XPATH, "/html/body/div/div[1]/div[1]/header/div[1]/div[3]/ul/li/ul/li[4]/a")
