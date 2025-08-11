@@ -1,6 +1,5 @@
 from selenium.webdriver.common.by import By
 
-
 class LoginLocators:
     USERNAME = (By.XPATH,"/html/body/div/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input")
     PASSWORD = (By.XPATH, "/html/body/div/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/div[2]/input")
@@ -25,15 +24,15 @@ class AdminUserManagementLocators:
     ORGANISATION = (By.XPATH, "/html/body/div/div[1]/div[1]/header/div[2]/nav/ul/li[3]/span")
     GENERAL_INFORMATION = (By.XPATH, "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-navigation > header > div.oxd-topbar-body > nav > ul > li.--active.oxd-topbar-body-nav-tab.--parent > ul > li:nth-child(1) > a")
     ORGANISATION_DROPDOWN = (By.XPATH, "/html/body/div/div[1]/div[1]/header/div[2]/nav/ul/li[3]/span")
-    LOCATIONS = (By.CSS_SELECTOR, "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-navigation > header > div.oxd-topbar-body > nav > ul > li.--active.oxd-topbar-body-nav-tab.--parent > ul > li:nth-child(2)")
+    LOCATIONS = (By.XPATH, "/html/body/div/div[1]/div[1]/header/div[2]/nav/ul/li[3]/ul/li[2]")
     ORGANISATION_DROP_DOWN = (By.XPATH, "/html/body/div/div[1]/div[1]/header/div[2]/nav/ul/li[3]/span")
     STRUCTURES = (By.XPATH, "/html/body/div/div[1]/div[1]/header/div[2]/nav/ul/li[3]/ul/li[3]")
     QUALIFICATIONS = (By.CSS_SELECTOR, "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-navigation > header > div.oxd-topbar-body > nav > ul > li:nth-child(4) > span")
-    SKILLS = (By.XPATH, "/html/body/div/div[1]/div[1]/header/div[2]/nav/ul/li[4]/ul/li[1]")
+    SKILLS = (By.XPATH, "//html/body/div/div[1]/div[1]/header/div[2]/nav/ul/li[4]/ul/li[1]")
     QUALIFICATIONS_DROPDOWN = (By.CSS_SELECTOR,"#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-navigation > header > div.oxd-topbar-body > nav > ul > li:nth-child(4) > span")
     EDUCATION = (By.CSS_SELECTOR, "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-navigation > header > div.oxd-topbar-body > nav > ul > li.--active.oxd-topbar-body-nav-tab.--parent > ul > li:nth-child(2)")
     QUALIFICATIONS_DROP_DOWN = (By.XPATH,"/html/body/div/div[1]/div[1]/header/div[2]/nav/ul/li[4]/span")
-    LICENSES = (By.XPATH, "/html/body/div/div[1]/div[1]/header/div[2]/nav/ul/li[4]/ul/li[3]")
+    LICENSES = (By.XPATH, "//html/body/div/div[1]/div[1]/header/div[2]/nav/ul/li[4]/ul/li[3]")
     QUALIFICATIONS_DROP_DOWN_BUTTON = (By.CSS_SELECTOR,"#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-navigation > header > div.oxd-topbar-body > nav > ul > li:nth-child(4) > span")
     LANGUAGES = (By.CSS_SELECTOR, "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-navigation > header > div.oxd-topbar-body > nav > ul > li.--active.oxd-topbar-body-nav-tab.--parent > ul > li:nth-child(4)")
     QUALIFICATIONS_DROP_DOWN_PAGE = (By.CSS_SELECTOR, "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-navigation > header > div.oxd-topbar-body > nav > ul > li:nth-child(4) > span")
@@ -58,4 +57,4 @@ class AdminUserManagementLocators:
     LDAP_CONFIGURATION = (By.CSS_SELECTOR, "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-navigation > header > div.oxd-topbar-body > nav > ul > li.--active.oxd-topbar-body-nav-tab > ul > div:nth-child(3) > ul > li:nth-child(8)")
 
 class LogoutLocators:
-    LOG_OUT = (By.XPATH, "/html/body/div/div[1]/div[1]/header/div[1]/div[3]/ul/li/ul/li[4]/a")
+    LOG_OUT = (By.XPATH, "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-navigation > header > div.oxd-topbar-header > div.oxd-topbar-header-userarea > ul > li > ul > li:nth-child(4) > a")

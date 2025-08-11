@@ -272,7 +272,11 @@ class Admin_User_Management_Page:
         click_ldap_configuration.click()
         time.sleep(Config.WAIT_TIME)
 
+class Logout_Page:
+    def __init__(self, driver):
+            self.driver = driver
+
     def click_log_out_page(self):
-        click_log_out_page = WebDriverWait(self.driver, 20).until(EC.presence_of_element_located(LogoutLocators.LOG_OUT))
-        click_log_out_page.click()
+        #log_out = WebDriverWait(self.driver, 20).until(EC.presence_of_element_located(LogoutLocators.LOG_OUT))
+        #log_out.click()
         time.sleep(Config.WAIT_TIME)

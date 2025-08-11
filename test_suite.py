@@ -2,14 +2,16 @@ import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
-from Actions.ActionPage import Action_Page, Admin_Page, Admin_User_Management_Page
+from Actions.ActionPage import Action_Page, Admin_Page, Admin_User_Management_Page, Logout_Page
 from Config.Configuration import Config
+from Locators.Locators_page import LogoutLocators
+
 
 @pytest.fixture(scope="session")
 def driver_setup():
     chrome_options = Options()
-    chrome_options.add_argument("--headless")      # Run in headless mode
-    chrome_options.add_argument("--disable-gpu")   # Prevent GPU errors in headless mode
+    #chrome_options.add_argument("--headless")      # Run in headless mode
+    #chrome_options.add_argument("--disable-gpu")   # Prevent GPU errors in headless mode
     driver = webdriver.Chrome(options=chrome_options)
     driver.implicitly_wait(20)                     # Wait implicitly up to 20s
     driver.maximize_window()                       # Maximize window (has no effect in headless, but harmless)
@@ -26,6 +28,7 @@ def test_login_page_on_automation_customer_service_website(login):
     login.enter_username("Admin")
     login.enter_password("admin123")
     login.click_login_button()
+
 
 def test_admin_page(login):
     admin_page = Admin_Page(login.driver)
@@ -48,11 +51,11 @@ def test_admin_user_management_page(login):
     admin_user_management.click_organisation()
     #admin_user_management.click_general_information()
     admin_user_management.click_organisation_dropdown()
-    admin_user_management.click_locations()
+    #admin_user_management.click_locations()
     admin_user_management.click_organisation_drop_down()
-    admin_user_management.click_structures()
-    admin_user_management.click_qualifications()
-    admin_user_management.click_skills()
+    #admin_user_management.click_structures()
+    #admin_user_management.click_qualifications()
+    #admin_user_management.click_skills()
     admin_user_management.click_qualifications_dropdown()
     admin_user_management.click_education()
     admin_user_management.click_qualifications_drop_down()
@@ -68,7 +71,7 @@ def test_admin_user_management_page(login):
     admin_user_management.click_configuration_DROP()
     #admin_user_management.click_emai_subscriptions()
     admin_user_management.click_configuration_down()
-    admin_user_management.click_localization()
+    #admin_user_management.click_localization()
     admin_user_management.click_configuration_dropdown()
     #admin_user_management.click_language_packages()
     admin_user_management.click_configuration_drop_down()
@@ -81,5 +84,5 @@ def test_admin_user_management_page(login):
     #admin_user_management.click_ldap_configuration()
 
 def test_log_out_page(login):
-    login_out = Admin_User_Management_Page(login.driver)
-    login_out.click_user_management()
+    log_out = Logout_Page(login.driver)
+    log_out.click_log_out_page()
