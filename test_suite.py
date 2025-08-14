@@ -6,7 +6,6 @@ from Actions.ActionPage import Action_Page, Admin_Page, Admin_User_Management_Pa
 from Config.Configuration import Config
 from Locators.Locators_page import LogoutLocators
 
-
 @pytest.fixture(scope="session")
 def driver_setup():
     chrome_options = Options()
